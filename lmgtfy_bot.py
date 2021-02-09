@@ -20,8 +20,8 @@ config = configparser.ConfigParser()
 config.sections()
 config.read('lmgtfy_bot.conf')
 
-bot = telebot.TeleBot(config['bot_token'])
-client = googl.Googl(config['google_client'])
+bot = telebot.TeleBot(config['DEFAULTS']['DEFAULTS']['bot_token'])
+client = googl.Googl(config['DEFAULTS']['google_client'])
 
 # @bot.inline_handler(func=lambda m: True)
 # def query_text(inline_query):
